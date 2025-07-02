@@ -14,10 +14,6 @@ mongoose.connect('mongodb://localhost:27017/lightning_savings');
 
 // === API Routes ===
 
-// app.get('/api/savings', async (req, res) => {
-//   const groups = await Group.find();
-//   res.json(groups);
-// });
 app.get('/api/savings', async (req, res) => {
   const groups = await Group.find();
   res.json(groups);
@@ -31,35 +27,11 @@ app.post('/api/savings', async (req, res) => {
   res.json({ message: 'Groupe créé', hashKey });
 });
 
-// app.post('/api/savings/:groupId/members', async (req, res) => {
-//   const { memberName } = req.body;
-//   try {
-//     const group = await Group.findById(req.params.groupId);
-
-//     if (!group) {
-//       return res.status(404).json({ error: "Groupe non trouvé" });
-//     }
-
-//     group.members.push(memberName);
-//     await group.save();
-
-//     res.json({ message: '✅ Membre ajouté avec succès', group });
-//   } catch (error) {
-//     console.error("Erreur ajout membre:", error.message);
-//     res.status(500).json({ error: "Erreur serveur lors de l'ajout du membre" });
-//   }
-// });
 app.post('/api/savings/:groupId/members', async (req, res) => {
-  const { groupId } = req.params;
   const { memberName } = req.body;
-
-  // ✅ Vérification que l’ID est un ObjectId MongoDB valide
-  if (!mongoose.Types.ObjectId.isValid(groupId)) {
-    return res.status(400).json({ error: "ID du groupe invalide" });
-  }
-
   try {
-    const group = await Group.findById(groupId);
+    const group = await Group.findById(req.params.groupId);
+
     if (!group) {
       return res.status(404).json({ error: "Groupe non trouvé" });
     }

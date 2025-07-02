@@ -14,10 +14,6 @@ mongoose.connect('mongodb://localhost:27017/lightning_savings');
 
 // === API Routes ===
 
-// app.get('/api/savings', async (req, res) => {
-//   const groups = await Group.find();
-//   res.json(groups);
-// });
 app.get('/api/savings', async (req, res) => {
   const groups = await Group.find();
   res.json(groups);
