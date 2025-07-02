@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+.search-page {
+  font-family: 'Rajdhani', sans-serif;
+  min-height: 100vh;
+  background-color: #010d1a;
+  position: relative;
+  padding-top: 80px;
+  overflow: hidden;
+  color: #a6e3e9;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+/* Parallax subtil + légère animation de dégradé en boucle */
+.parallax-bg {
+  background-image: url('https://images.unsplash.com/photo-1588776814546-4a0b5f3b58c7?auto=format&fit=crop&w=1470&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 130%;
+  width: 100%;
+  z-index: 0;
+  opacity: 0.15;
+  filter: blur(5px);
+  animation: slowGlow 25s ease-in-out infinite alternate;
+}
+
+@keyframes slowGlow {
+  0%, 100% {
+    filter: blur(5px) brightness(0.85);
+  }
+  50% {
+    filter: blur(4px) brightness(1);
+  }
+}
+
+/* Contenu au-dessus */
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* TITRE NEON, plus doux et organique */
+@keyframes pulseSoft {
+  0%, 100% {
+    text-shadow:
+      0 0 12px #72f7f5, 0 0 25px #72f7f5,
+      0 0 30px #00d1ce, 0 0 45px #00d1ce,
+      0 0 60px #00fff7, 0 0 90px #00fff7;
+  }
+  50% {
+    text-shadow:
+      0 0 18px #7ff8fa, 0 0 38px #7ff8fa,
+      0 0 45px #04f5f0, 0 0 55px #04f5f0,
+      0 0 65px #00fff7, 0 0 110px #00fff7;
+  }
+}
+
+.neon-title {
+  color: #a6e3e9;
+  font-size: 3rem;
+  animation: pulseSoft 5s ease-in-out infinite;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+/* Glassmorphism FORM, plus fluide avec légère vibration douce */
+.glass-form {
+  background: rgba(20, 40, 50, 0.35);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(100, 240, 255, 0.15);
+  box-shadow:
+    inset 0 0 15px rgba(100, 240, 255, 0.25),
+    0 0 30px rgba(50, 200, 255, 0.15);
+  padding: 2rem 2.5rem;
+  transition: box-shadow 0.5s ease;
+  will-change: box-shadow;
+  animation: subtleFloat 6s ease-in-out infinite;
+}
+
+.glass-form:hover {
+  box-shadow:
+    inset 0 0 30px rgba(100, 255, 255, 0.4),
+    0 0 50px rgba(0, 255, 255, 0.25);
+}
+
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(0.5deg);
+  }
+}
+
+/* Inputs futuristes doux & fluides */
+.futuristic-input {
+  background: #0b1620;
+  border: 1.5px solid #32dfff;
+  color: #a6e3e9;
+  padding: 14px 18px;
+  font-size: 1.05rem;
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  box-shadow: 0 0 12px rgba(50, 223, 255, 0.3);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  width: 100%;
+  user-select: text;
+}
+
+.futuristic-input::placeholder {
+  color: #609bbdcc;
+  font-style: italic;
+}
+
+.futuristic-input:hover {
+  border-color: #00f5ff;
+  box-shadow: 0 0 22px #00f5ffaa;
+}
+
+.futuristic-input:focus {
+  outline: none;
+  border-color: #22ffff;
+  box-shadow:
+    0 0 30px #22ffff,
+    0 0 45px #11ffffaa;
+  animation: inputGlowPulse 3s ease-in-out infinite;
+}
+
+@keyframes inputGlowPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 30px #22ffff,
+      0 0 45px #11ffffaa;
+  }
+  50% {
+    box-shadow:
+      0 0 45px #33ffff,
+      0 0 60px #22ffffbb;
+  }
+}
+
+/* Boutons glow plus organique, pulsation rythmée + scale */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 12px #00fff7,
+      0 0 25px #00fff7,
+      0 0 40px #00c9d1,
+      0 0 60px #00c9d1;
+    transform: scale(1);
+  }
+  50% {
+    box-shadow:
+      0 0 22px #00fff7,
+      0 0 45px #00fff7,
+      0 0 55px #00d6e0,
+      0 0 80px #00d6e0;
+    transform: scale(1.07);
+  }
+}
+
+.glow-btn {
+  background-color: #00f0ff;
+  color: #002222;
+  font-weight: 700;
+  border-radius: 14px;
+  padding: 14px 28px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: glowPulse 5s ease-in-out infinite;
+  box-shadow:
+    0 0 20px #00fff7,
+    0 0 50px #00fff7;
+}
+
+.glow-btn:hover {
+  box-shadow:
+    0 0 40px #00fff7,
+    0 0 90px #00fff7;
+  transform: scale(1.1) rotate(-1deg);
+}
+
+/* Product card : effet plus organique + rotation et translation légères */
+.product-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(15px);
+  color: #cff9ff;
+  padding: 1rem;
+  cursor: default;
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s ease;
+  box-shadow:
+    0 0 25px rgba(0, 255, 255, 0.1);
+  will-change: transform;
+  user-select: none;
+  animation: gentleFloat 8s ease-in-out infinite;
+}
+
+.product-card:hover {
+  transform: translateY(-15px) rotate(1deg) scale(1.05);
+  box-shadow:
+    0 0 40px rgba(0, 255, 255, 0.35),
+    0 5px 15px rgba(0, 255, 255, 0.15);
+  z-index: 5;
+  animation-play-state: paused;
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(-0.5deg);
+  }
+}
+
+/* Titres des cartes */
+.product-card .card-title {
+  color: #33f4ff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 8px #00e6ffaa;
+}
+
+/* Description texte */
+.product-card .card-text {
+  color: #b1e7f9cc;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  user-select: text;
+}
+
+/* Disponibilité */
+.product-card h6 {
+  color: #60f0ffcc;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+/* Pharmacies list */
+.product-card div {
+  font-size: 0.9rem;
+  color: #94e7ffbb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+/* Boutons voir pharmacie */
+.product-card button {
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 4px 14px;
+  background: linear-gradient(45deg, #00f0ffcc, #008eabcc);
+  color: #003333;
+  border: none;
+  transition: background 0.4s ease;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background: linear-gradient(45deg, #00fff7ff, #00b7d1ff);
+  color: #002222;
+  box-shadow: 0 0 10px #00fff7cc;
+}
+
+/* Orbes flottants : plus naturels, tailles et positions variées */
+@keyframes floatingLightOrganic {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateY(-15px) translateX(7px) scale(1.05);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(-8px) translateX(-10px) scale(0.95);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translateY(-15px) translateX(10px) scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+.floating-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(25px);
+  background: radial-gradient(circle, #00fff7 0%, #00151f 85%);
+  z-index: 1;
+  pointer-events: none;
+  animation: floatingLightOrganic 10s ease-in-out infinite;
+}
+
+.floating-orb.one {
+  top: 8%;
+  left: 22%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 0s;
+}
+
+.floating-orb.two {
+  bottom: 15%;
+  right: 28%;
+  width: 130px;
+  height: 130px;
+  animation-delay: 4.5s;
+}
+
+.floating-orb.three {
+  top: 30%;
+  right: 10%;
+  width: 90px;
+  height: 90px;
+  animation-delay: 2.2s;
+  background: radial-gradient(circle, #33faffaa 0%, #00222f 90%);
+}
+
+/* Message "aucun résultat" plus vivant */
+.text-light p {
+  font-size: 1.3rem;
+  color: #55dbffcc;
+  margin-top: 3rem;
+  font-style: italic;
+  user-select: none;
+  text-align: center;
+  animation: pulseSoft 5s ease-in-out infinite;
+  cursor: default;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .neon-title {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .glass-form {
+    padding: 1.5rem 1.8rem;
+  }
+
+  .glow-btn {
+    padding: 12px 18px;
+  }
+
+  .product-card {
+    font-size: 0.9rem;
+  }
+}

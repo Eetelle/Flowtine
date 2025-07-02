@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+.search-page {
+  font-family: 'Orbitron', sans-serif;
+  min-height: 100vh;
+  background-color: #010d1a;
+  position: relative;
+  padding-top: 80px;
+}
+
+.parallax-bg {
+  background-image: url('https://images.unsplash.com/photo-1588776814546-4a0b5f3b58c7');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 130%;
+  width: 100%;
+  z-index: 0;
+  opacity: 0.2;
+  filter: blur(4px);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.neon-title {
+  color: #00fff7;
+  text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+  font-size: 2.5rem;
+}
+
+.glass-form {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.futuristic-input {
+  background: #010d1a;
+  border: 1px solid #00fff7;
+  color: #fff;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.futuristic-input::placeholder {
+  color: #aaa;
+}
+
+.glow-btn {
+  background-color: #00fff7;
+  color: #000;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+}
+
+.glow-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00fff7, 0 0 40px #00fff7;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  color: #fff;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+}
+
+.product-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+}

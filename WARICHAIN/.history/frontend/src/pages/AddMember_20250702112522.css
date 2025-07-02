@@ -1,0 +1,70 @@
+/* AddMember.css */
+
+/* === Glass effect === */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 1.2rem;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+    color: #e0ffff;
+    transition: box-shadow 0.3s ease;
+  }
+  .glass:hover {
+    box-shadow: 0 0 35px rgba(0, 255, 255, 0.6);
+  }
+  
+  /* === Neon title === */
+  .text-neon {
+    color: #00ffff;
+    text-shadow:
+      0 0 5px #00ffff,
+      0 0 10px #00ffff,
+      0 0 20px #00ffff,
+      0 0 40px #0ff;
+    transition: color 0.3s ease;
+  }
+  
+  /* === Neon input styles === */
+  .neon-input {
+    background: rgba(0, 255, 255, 0.08);
+    border: 1px solid #00ffff55;
+    color: #00ffff;
+    box-shadow: inset 0 0 10px #00ffff44;
+    transition: all 0.3s ease;
+  }
+  
+  .neon-input:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 20px #00ffffaa;
+    background: rgba(0, 255, 255, 0.15);
+    outline: none;
+  }
+  
+  /* === Neon button === */
+  .neon-btn {
+    background-color: #00ffff;
+    color: #003333;
+    font-weight: 700;
+    box-shadow: 0 0 15px #00ffff;
+    border: none;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+  }
+  
+  .neon-btn:hover {
+    background-color: #00ffffcc;
+    box-shadow: 0 0 30px #00ffff;
+  }
+  
+  /* === Additional small animations === */
+  .card {
+    transition: transform 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  

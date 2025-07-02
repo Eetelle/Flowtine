@@ -1,0 +1,101 @@
+/* Glass effect avec plus de contraste */
+.card.glass {
+    background: rgba(0, 255, 255, 0.12); /* moins transparent */
+    backdrop-filter: blur(20px);
+    border-radius: 1.2rem;
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.5);
+    color: #ccffff;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .card.glass:hover {
+    box-shadow: 0 0 60px rgba(0, 255, 255, 0.85);
+    transform: translateY(-7px);
+  }
+  
+  /* Neon Titles */
+  .text-neon {
+    color: #00ffff;
+    text-shadow:
+      0 0 6px #00ffff,
+      0 0 15px #00ffff,
+      0 0 25px #00ffff,
+      0 0 50px #0ff;
+    transition: color 0.3s ease;
+  }
+  
+  /* Inputs & selects */
+  .form-control.neon-input,
+  .form-select.neon-input {
+    background: rgba(0, 255, 255, 0.15); /* plus opaque */
+    border: 1.5px solid #00ffffcc;
+    color: #00ffff;
+    box-shadow: inset 0 0 15px #00ffff88;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .form-control.neon-input:focus,
+  .form-select.neon-input:focus {
+    border-color: #00ffffee;
+    box-shadow: 0 0 30px #00ffffcc;
+    background: rgba(0, 255, 255, 0.25);
+    outline: none;
+    color: #00ffff;
+    font-weight: 700;
+  }
+  
+  /* Options du select */
+  .form-select.neon-input option {
+    background-color: #0f2027;
+    color: #00ffff;
+    font-weight: 600;
+  }
+  
+  /* Boutons */
+  .btn.neon-btn {
+    background-color: #00ffff;
+    color: #003333;
+    font-weight: 800;
+    box-shadow: 0 0 20px #00ffffcc;
+    border: none;
+    font-size: 1.15rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn.neon-btn:hover,
+  .btn.neon-btn:focus {
+    background-color: #00ffffdd;
+    box-shadow: 0 0 55px #00ffffff;
+    color: #001f1f;
+    outline: none;
+    text-decoration: none;
+  }
+  
+  /* Labels */
+  .form-label {
+    color: #00ffff;
+    font-weight: 700;
+    text-shadow:
+      0 0 6px #00ffff,
+      0 0 15px #00ffff;
+    user-select: none;
+  }
+  
+  /* Container max-width */
+  .container {
+    max-width: 520px;
+    padding: 2rem;
+  }
+  
+  /* Animation override */
+  .animate__fadeInDown {
+    animation-duration: 1.2s;
+  }
+  
